@@ -10,6 +10,13 @@ export const initialState = {
 
 export const reducer = (state, action) => {
     switch(action.type) {
+        case 'add' :
+            return {todos: [...state.todos, 
+                {
+                    item: action.item,
+                    completed: false,
+                    id: Date.now()
+                }]}
         default: 
             return state
     }
