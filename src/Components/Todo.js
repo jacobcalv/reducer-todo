@@ -5,6 +5,8 @@ import React, {useState} from 'react'
     return (
         <div>
             <h1>{todo.item}</h1>
+            <button>Remove</button>
+            <button>Edit</button>
         </div>
     )
 }

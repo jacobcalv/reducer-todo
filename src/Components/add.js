@@ -5,7 +5,7 @@ import React, {useState} from 'react'
     return (
         <div>
             <input value={item} onChange={e => setItem(e.target.value)} />
-            <button onClick={()=> {add(item); setItem('')}}></button>
+            <button onClick={()=> {add(item); setItem('')}}>Add Item</button>
         </div>
     )
 }
