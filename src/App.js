@@ -29,21 +29,6 @@ function App() {
     margin: 0px;
     padding: 0px;
   `
-  // function toggleComplete(id) {
-  //   const updatedTasks = tasks.map(task => {
-  //     if (task.id === id) {
-  //       return ({ ...task, completed: !task.completed })
-  //     } else {
-  //       return task;
-  //     }
-  //   })
-  //   setTasks(updatedTasks);
-  // }
-
-  // function deleteCompleted() {
-  //   const updatedTasks = tasks.filter(task => !task.completed);
-  //   setTasks(updatedTasks);
-  // }
   return (
     <Container>
     <Heading>Your Todo List</Heading>
@@ -55,6 +40,7 @@ function App() {
         <Todo
           key={todo.id}
           todo={todo}
+          remove={()=> dispatch({type: "remove", id: todo.id})}
         />
       ))}
     </TodosContainer>

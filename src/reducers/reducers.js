@@ -17,23 +17,15 @@ export const reducer = (state, action) => {
                     completed: false,
                     id: Date.now()
                 }]}
-        case "completed":
+        case "remove":
             {
-                const id = state.todos.findIndex(todo => todo.id === action.payload.id)
-                const todo = {...state.todos[id]}
-                todo.complete = !action.payload.completed
-                const todos = [...state.todos]
-                todos.splice(id,1,todo)
+                const idx = state.todos.findIndex(t => t.id === action.id);
+                const todos = Object.assign([], state.todos);
+                todos.splice(idx, 1);
                 return {
-                    todos: todos
-                }
-            }
-        case "delete":
-            {
-                const filterTodos = state.todos.filter(todo => todo.completed !== true)
-                return {
-                    todos: filterTodos
-                }
+                counter: state.counter,
+                todos: todos,
+                };
             }
         default: 
             return state
