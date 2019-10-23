@@ -17,6 +17,7 @@ import styled from 'styled-components'
         align-content: center;
         margin-top: 1.4rem;
         margin-left: .5rem;
+        background-color: red;
     `
     return (
         <TodoContainer>
