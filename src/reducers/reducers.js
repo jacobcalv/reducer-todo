@@ -23,7 +23,6 @@ export const reducer = (state, action) => {
                 const todos = Object.assign([], state.todos);
                 todos.splice(idx, 1);
                 return {
-                counter: state.counter,
                 todos: todos,
                 };
             }
